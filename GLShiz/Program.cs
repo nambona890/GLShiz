@@ -14,7 +14,6 @@ namespace GLShiz
         private static ShaderProgram program;
         private static System.Diagnostics.Stopwatch watch;
         private static Vector3 rotation;
-        private static Vector4 rotation2;
         private static Vector3 position;
         private static GLModel model;
         private static bool[] keys;
@@ -49,84 +48,6 @@ namespace GLShiz
             program["projection_matrix"].SetValue(Matrix4.CreatePerspectiveFieldOfView(0.45f, (float)width / height, 0.1f, 1000f));
             program["view_matrix"].SetValue(Matrix4.LookAt(new Vector3(0, 0, 10), Vector3.Zero, Vector3.UnitY));
             program["light_direction"].SetValue(new Vector3(0, 0, 1));
-
-            //Vector3[] cube = new Vector3[]
-            //{
-            //    new Vector3(-1,-1,1),new Vector3(-1,1,1),new Vector3(1,1,1), //front
-            //    new Vector3(-1,-1,1),new Vector3(1,1,1),new Vector3(1,-1,1),
-
-
-            //    new Vector3(1,-1,1),new Vector3(1,1,1),new Vector3(1,1,-1), //right
-            //    new Vector3(1,-1,1),new Vector3(1,1,-1),new Vector3(1,-1,-1),
-
-
-            //    new Vector3(1,-1,-1),new Vector3(1,1,-1),new Vector3(-1,1,-1), //back
-            //    new Vector3(1,-1,-1),new Vector3(-1,1,-1),new Vector3(-1,-1,-1),
-
-
-            //    new Vector3(-1,-1,-1),new Vector3(-1,1,-1),new Vector3(-1,1,1), //left
-            //    new Vector3(-1,-1,-1),new Vector3(-1,1,1),new Vector3(-1,-1,1),
-
-
-            //    new Vector3(-1,1,-1),new Vector3(-1,1,1),new Vector3(1,1,1), //top
-            //    new Vector3(-1,1,-1),new Vector3(1,1,1),new Vector3(1,1,-1),
-
-
-            //    new Vector3(-1,-1,1),new Vector3(-1,-1,-1),new Vector3(1,-1,-1), //bottom
-            //    new Vector3(-1,-1,1),new Vector3(1,-1,-1),new Vector3(1,-1,1),
-
-
-
-            //};
-
-            //Vector3[] cubeNormal = new Vector3[]
-            //{
-            //    new Vector3(0,0,1),new Vector3(0,0,1),new Vector3(0,0,1), //front
-            //    new Vector3(0,0,1),new Vector3(0,0,1),new Vector3(0,0,1),
-
-            //    new Vector3(1,0,0),new Vector3(1,0,0),new Vector3(1,0,0), //right
-            //    new Vector3(1,0,0),new Vector3(1,0,0),new Vector3(1,0,0),
-
-            //    new Vector3(0,0,-1),new Vector3(0,0,-1),new Vector3(0,0,-1), //back
-            //    new Vector3(0,0,-1),new Vector3(0,0,-1),new Vector3(0,0,-1),
-
-            //    new Vector3(-1,0,0),new Vector3(-1,0,0),new Vector3(-1,0,0), //left
-            //    new Vector3(-1,0,0),new Vector3(-1,0,0),new Vector3(-1,0,0),
-
-            //    new Vector3(0,1,0),new Vector3(0,1,0),new Vector3(0,1,0), //top
-            //    new Vector3(0,1,0),new Vector3(0,1,0),new Vector3(0,1,0),
-
-            //    new Vector3(0,-1,0),new Vector3(0,-1,0),new Vector3(0,-1,0), //bottom
-            //    new Vector3(0,-1,0),new Vector3(0,-1,0),new Vector3(0,-1,0),
-            //};
-
-            //Vector2[] cubeUV = new Vector2[]
-            //{
-            //    new Vector2(0,0),new Vector2(0,1),new Vector2(1,1),
-            //    new Vector2(0,0),new Vector2(1,1),new Vector2(1,0),
-                
-            //    new Vector2(0,0),new Vector2(0,1),new Vector2(1,1),
-            //    new Vector2(0,0),new Vector2(1,1),new Vector2(1,0),
-                
-            //    new Vector2(0,0),new Vector2(0,1),new Vector2(1,1),
-            //    new Vector2(0,0),new Vector2(1,1),new Vector2(1,0),
-
-            //    new Vector2(0,0),new Vector2(0,1),new Vector2(1,1),
-            //    new Vector2(0,0),new Vector2(1,1),new Vector2(1,0),
-
-            //    new Vector2(0,0),new Vector2(0,1),new Vector2(1,1),
-            //    new Vector2(0,0),new Vector2(1,1),new Vector2(1,0),
-
-            //    new Vector2(0,0),new Vector2(0,1),new Vector2(1,1),
-            //    new Vector2(0,0),new Vector2(1,1),new Vector2(1,0),
-            //};
-            //uint[] cubeTris = new uint[cube.Length];
-            //for(uint i=0;i<cubeTris.Length;i++)
-            //{
-            //    cubeTris[i] = i;
-            //}
-
-            //model = new GLModel(cube, cubeUV, cubeTris, cubeNormal, new Texture("tommycube.jpg"));
 
             model = new GLModel(new string[] { 
                 "isabelle1.obj", "isabelle2.obj", "isabelle3.obj", "isabelle4.obj"
