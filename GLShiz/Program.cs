@@ -50,9 +50,9 @@ namespace GLShiz
             program["light_direction"].SetValue(new Vector3(0, 0, 1));
 
             model = new GLModel(new string[] { 
-                "isabelle1.obj", "isabelle2.obj", "isabelle3.obj", "isabelle4.obj"
+                "isabellehi1.obj", "isabellehi2.obj"
             }, new Texture[] {
-                new Texture("b0.png"),new Texture("cloth.png"),new Texture("e.0.png"),new Texture("m.0.png")
+                new Texture("isabellehi1.png"),new Texture("isabellehi2.png")
             });
 
             watch = System.Diagnostics.Stopwatch.StartNew();

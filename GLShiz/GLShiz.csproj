@@ -85,16 +85,20 @@
     <None Include="data\isabelle2.obj" />
     <None Include="data\isabelle3.obj" />
     <None Include="data\isabelle4.obj" />
+    <None Include="data\isabellehi1.obj" />
+    <None Include="data\isabellehi2.obj" />
     <None Include="data\tommycube.obj" />
     <None Include="lib\OpenGL.dll.config" />
     <None Include="lib\Tao.FreeGlut.dll.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\b0.png" />
-    <Content Include="data\cloth.png" />
-    <Content Include="data\e.0.png" />
-    <Content Include="data\m.0.png" />
-    <Content Include="data\t0100_0.png" />
+    <Content Include="data\carl.png" />
+    <Content Include="data\isabelle1.png" />
+    <Content Include="data\isabelle2.png" />
+    <Content Include="data\isabelle3.png" />
+    <Content Include="data\isabelle4.png" />
+    <Content Include="data\isabellehi1.png" />
+    <Content Include="data\isabellehi2.png" />
     <Content Include="data\tommycube.jpg" />
     <Content Include="lib\freeglut.dll" />
     <Content Include="lib\OpenGL.dll" />
