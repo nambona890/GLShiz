@@ -17,6 +17,3 @@ R,F: Translate along the Z axis
 Up,Down: Translate along the Y axis
 
 Left,Right: Translate along the X axis
-
-
-P: Reset to default values
