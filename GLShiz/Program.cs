@@ -187,6 +187,8 @@ namespace GLShiz
             foreach (GLMesh mesh in model.meshes)
             {
                 Gl.BindTexture(mesh.tex);
+                Gl.TexParameteri(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, Convert.ToInt32(TextureParameter.Linear));
+                Gl.TexParameteri(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, Convert.ToInt32(TextureParameter.Linear));
 
                 program["model_matrix"].SetValue(Matrix4.CreateRotationX(rotation.X) * Matrix4.CreateRotationY(rotation.Y) * Matrix4.CreateRotationZ(rotation.Z) * Matrix4.CreateTranslation(position));
                 Gl.BindBufferToShaderAttribute(mesh.verts, program, "vertexPosition");
@@ -234,7 +236,7 @@ in vec3 normal;
 out vec4 fragment;
 
 void main(void)
-{
+{  
     float diffuse = max(dot(normal, light_direction) ,0);
     float ambient = 0.3;
     float lighting = max(diffuse, ambient);
